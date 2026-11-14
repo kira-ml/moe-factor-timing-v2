@@ -1,0 +1,33 @@
+# Environment
+venv/
+.env
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Generated run artifacts
+runs/
+
+# Local data downloads (the frozen reference snapshot is committed)
+data/raw/
+data/cache/
+
+# Editor / OS
+.serena/
+.DS_Store
+Thumbs.db
+
+# Third-party data with unresolved redistribution terms: kept locally only
+archive/
+data/reference/factors.csv
+
+# Publication build intermediates
+publication/assets/
+publication/.chrome_profile/

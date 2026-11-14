@@ -1,0 +1,34 @@
+{
+  "citation": "Fama, E. F., & French, K. R. (1993). Common risk factors in the returns on stocks and bonds. Journal of Financial Economics, 33(1), 3-56. Data: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html",
+  "columns": [
+    "MKT_RF",
+    "SMB",
+    "HML",
+    "RMW",
+    "CMA",
+    "MOM",
+    "RF"
+  ],
+  "end": "2026-09-30",
+  "factor_definitions": {
+    "CMA": "Conservative-minus-aggressive investment factor",
+    "HML": "High-minus-low value factor",
+    "MKT_RF": "Market excess return",
+    "MOM": "Momentum factor (12-2 prior return)",
+    "RF": "One-month Treasury bill return",
+    "RMW": "Robust-minus-weak profitability factor",
+    "SMB": "Small-minus-big size factor"
+  },
+  "file_sha256": "cc805ab0e62e8280b747febbe047cf85212c5d1fd36a7a476074350d734cf275",
+  "frequency": "monthly",
+  "n_rows": 759,
+  "point_in_time_caveat": "Ken French factors are reconstructed from the current CRSP database and are not a literal point-in-time vintage. This benchmark therefore tests model behaviour on a research panel, not live tradability.",
+  "retrieved_at_utc": "2026-11-14T07:03:34.829416+00:00",
+  "source": "Ken French Data Library",
+  "source_urls": [
+    "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_5_Factors_2x3_CSV.zip",
+    "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Momentum_Factor_CSV.zip"
+  ],
+  "start": "1963-07-31",
+  "units": "decimal excess returns (0.01 == 1%); RF is a decimal total return"
+}

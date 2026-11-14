@@ -1,0 +1,251 @@
+{
+  "extra_restarts": 3,
+  "fraction_windows_restarts_better_ll": 0.7083333333333334,
+  "fraction_windows_restarts_better_nll": 0.3333333333333333,
+  "max_train_ll_gain": 148.43437523249486,
+  "mean_test_nll_change": -0.38224241303040024,
+  "mean_train_ll_gain": 33.0914907511071,
+  "n_windows": 24,
+  "rows": [
+    {
+      "base_iterations": 25,
+      "decision_date": "1974-06-30",
+      "multi_iterations": 25,
+      "test_idx": 120,
+      "test_nll_base": 23.05765181092264,
+      "test_nll_multi": 27.700963244504482,
+      "train_ll_base": -302.41250008330877,
+      "train_ll_multi": -164.93773033475304
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "1976-09-30",
+      "multi_iterations": 25,
+      "test_idx": 147,
+      "test_nll_base": -11.000820723792259,
+      "test_nll_multi": -14.622488826413969,
+      "train_ll_base": -448.03612333681383,
+      "train_ll_multi": -400.4208134896793
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "1978-12-31",
+      "multi_iterations": 25,
+      "test_idx": 174,
+      "test_nll_base": -15.813392889279067,
+      "test_nll_multi": -14.2401204065494,
+      "train_ll_base": -662.1880640031063,
+      "train_ll_multi": -629.370887066704
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "1981-03-31",
+      "multi_iterations": 25,
+      "test_idx": 201,
+      "test_nll_base": 4.728856298959217,
+      "test_nll_multi": -0.29913668882406047,
+      "train_ll_base": -861.4360294686144,
+      "train_ll_multi": -834.2457204734601
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "1983-06-30",
+      "multi_iterations": 25,
+      "test_idx": 228,
+      "test_nll_base": 6.327735273881128,
+      "test_nll_multi": 3.63843926482147,
+      "train_ll_base": -1038.4825047900517,
+      "train_ll_multi": -1002.7668946736678
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "1985-10-31",
+      "multi_iterations": 25,
+      "test_idx": 256,
+      "test_nll_base": -16.851004327153376,
+      "test_nll_multi": -16.851004327153376,
+      "train_ll_base": -1285.6888029465665,
+      "train_ll_multi": -1285.6888029465665
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "1988-01-31",
+      "multi_iterations": 25,
+      "test_idx": 283,
+      "test_nll_base": -11.306847087522593,
+      "test_nll_multi": -13.989009780070358,
+      "train_ll_base": -1566.256911499905,
+      "train_ll_multi": -1512.7038409169813
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "1990-04-30",
+      "multi_iterations": 25,
+      "test_idx": 310,
+      "test_nll_base": -14.864711561354234,
+      "test_nll_multi": -12.49199020891112,
+      "train_ll_base": -1744.020587462649,
+      "train_ll_multi": -1706.459528204976
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "1992-07-31",
+      "multi_iterations": 25,
+      "test_idx": 337,
+      "test_nll_base": -14.282730816879491,
+      "test_nll_multi": -13.718632861028135,
+      "train_ll_base": -1987.9801524357506,
+      "train_ll_multi": -1950.442518147715
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "1994-10-31",
+      "multi_iterations": 25,
+      "test_idx": 364,
+      "test_nll_base": -16.81198575822712,
+      "test_nll_multi": -16.81198575822712,
+      "train_ll_base": -2149.000589714882,
+      "train_ll_multi": -2149.000589714882
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "1997-02-28",
+      "multi_iterations": 25,
+      "test_idx": 392,
+      "test_nll_base": -15.720228006276436,
+      "test_nll_multi": -15.720228006276436,
+      "train_ll_base": -2343.17841745219,
+      "train_ll_multi": -2343.17841745219
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "1999-05-31",
+      "multi_iterations": 25,
+      "test_idx": 419,
+      "test_nll_base": -9.154583902673306,
+      "test_nll_multi": -7.244127649415932,
+      "train_ll_base": -2594.9586492879275,
+      "train_ll_multi": -2580.6073466810094
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "2001-08-31",
+      "multi_iterations": 25,
+      "test_idx": 446,
+      "test_nll_base": 7.943874943453582,
+      "test_nll_multi": 1.0610240187213429,
+      "train_ll_base": -2480.7071458754644,
+      "train_ll_multi": -2436.7236638206396
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "2003-11-30",
+      "multi_iterations": 25,
+      "test_idx": 473,
+      "test_nll_base": -7.457450697743899,
+      "test_nll_multi": -8.50790653990989,
+      "train_ll_base": -2733.8362911064523,
+      "train_ll_multi": -2700.331916239451
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "2006-03-31",
+      "multi_iterations": 25,
+      "test_idx": 501,
+      "test_nll_base": -15.701952321784777,
+      "test_nll_multi": -16.067652258812714,
+      "train_ll_base": -3020.2869446677096,
+      "train_ll_multi": -2871.8525694352147
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "2008-06-30",
+      "multi_iterations": 25,
+      "test_idx": 528,
+      "test_nll_base": -4.596457301346571,
+      "test_nll_multi": -3.8677583907563164,
+      "train_ll_base": -3103.363158920997,
+      "train_ll_multi": -3099.89287864299
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "2010-09-30",
+      "multi_iterations": 25,
+      "test_idx": 555,
+      "test_nll_base": -17.314844119568427,
+      "test_nll_multi": -17.20215204927899,
+      "train_ll_base": -3317.34286375285,
+      "train_ll_multi": -3291.7595561621065
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "2012-12-31",
+      "multi_iterations": 25,
+      "test_idx": 582,
+      "test_nll_base": -13.942119125558566,
+      "test_nll_multi": -14.178692414951053,
+      "train_ll_base": -3505.2390516934674,
+      "train_ll_multi": -3491.574361745258
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "2015-03-31",
+      "multi_iterations": 25,
+      "test_idx": 609,
+      "test_nll_base": -12.437771360538568,
+      "test_nll_multi": -12.437771360538568,
+      "train_ll_base": -3659.3246710723224,
+      "train_ll_multi": -3659.3246710723224
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "2017-07-31",
+      "multi_iterations": 25,
+      "test_idx": 637,
+      "test_nll_base": -15.020473767100906,
+      "test_nll_multi": -15.020473767100906,
+      "train_ll_base": -3947.9914234318962,
+      "train_ll_multi": -3947.9914234318962
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "2019-10-31",
+      "multi_iterations": 25,
+      "test_idx": 664,
+      "test_nll_base": -15.254087845180704,
+      "test_nll_multi": -15.254087845180704,
+      "train_ll_base": -4132.005305371264,
+      "train_ll_multi": -4132.005305371264
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "2022-01-31",
+      "multi_iterations": 25,
+      "test_idx": 691,
+      "test_nll_base": -11.688535037468238,
+      "test_nll_multi": -11.688535037468238,
+      "train_ll_base": -4349.313000715695,
+      "train_ll_multi": -4349.313000715695
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "2024-04-30",
+      "multi_iterations": 25,
+      "test_idx": 718,
+      "test_nll_base": -12.222794482639234,
+      "test_nll_multi": -12.139693778454136,
+      "train_ll_base": -4651.56507256718,
+      "train_ll_multi": -4555.053418498119
+    },
+    {
+      "base_iterations": 25,
+      "decision_date": "2026-08-31",
+      "multi_iterations": 25,
+      "test_idx": 746,
+      "test_nll_base": -8.372132976370834,
+      "test_nll_multi": -6.977602266697517,
+      "train_ll_base": -4828.4554369463185,
+      "train_ll_multi": -4823.228065339272
+    }
+  ]
+}

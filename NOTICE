@@ -1,0 +1,29 @@
+# Data and Licensing Notice
+
+## Code
+
+The original source code and documentation in this repository are licensed under the MIT License. See `LICENSE`.
+
+## Third-party data
+
+The repository does **not** redistribute the following data in the public git tree:
+
+- The Ken French five-factor and momentum panel.
+- The archived Version 1 ETF, VIX, and FRED data.
+
+These files are retained locally for research and reference only. Their source pages do not state an explicit open redistribution license. Users are responsible for obtaining the data from the original sources and complying with the applicable terms.
+
+- Ken French Data Library: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html
+- FRED: https://fred.stlouisfed.org/
+- Yahoo Finance: https://finance.yahoo.com/
+- CBOE: https://www.cboe.com/
+
+The derived statistics, figures, and research report in this repository are research outputs. They are not a redistribution of the raw data and do not grant any rights to the underlying data.
+
+## Fonts
+
+The one-page publication embeds Source Serif 4 and IBM Plex Sans/Mono subsets under the SIL Open Font License 1.1. See `publication/FONT_LICENSE.txt` and `publication/fonts/OFL-*.txt`.
+
+## No legal advice
+
+This notice is a project disclosure, not legal advice. The data-redistribution question should be reviewed by qualified counsel before any public release that includes the raw files.

@@ -1,0 +1,97 @@
+run:
+  id: null
+  seed: 42
+  description: "Reference run: long-sample factor allocation benchmark"
+
+data:
+  source: "ken_french"
+  reference_dir: "data/reference"
+  factors: ["MKT_RF", "SMB", "HML", "RMW", "CMA", "MOM"]
+  risk_free: "RF"
+  start: null
+  end: null
+
+features:
+  return_lags: [0, 1, 5, 11]
+  vol_window: 12
+  dropna: true
+
+split:
+  # 120 months of training, then one decision per month. The holdout is a
+  # contiguous suffix that is never used for fitting or model selection.
+  min_train: 120
+  test_step: 1
+  holdout_start: "2006-01-31"
+
+models:
+  - name: one_over_n
+    kind: allocator
+    method: equal
+  - name: inverse_vol
+    kind: allocator
+    method: inverse_vol
+    params: {window: 12, max_weight: 0.35}
+  - name: momentum
+    kind: allocator
+    method: momentum
+    params: {window: 12, max_weight: 0.35}
+  - name: cash
+    kind: allocator
+    method: cash
+  - name: static_mv
+    kind: forecast
+    method: static_mv
+    params: {shrinkage: 0.2}
+  - name: ridge
+    kind: forecast
+    method: ridge
+    params: {alpha: 10.0, shrinkage: 0.2}
+  - name: moe
+    kind: forecast
+    method: moe
+    params:
+      n_experts: 3
+      n_restarts: 1
+      max_iter: 25
+      tol: 1.0e-6
+      ridge_alpha: 1.0
+      gating_l2: 0.01
+      covariance_shrinkage: 0.2
+      gating_steps: 6
+      gating_lr: 0.5
+      min_responsibility: 1.0e-4
+
+decision:
+  utility: mean_variance
+  risk_aversion: 2.0
+  constraints:
+    long_only: true
+    fully_invested: true
+    max_weight: 0.35
+    turnover_cap: null
+  cost:
+    one_way_bps: 10.0
+    strategy_drag_bps_per_month: 0.0
+  solver:
+    name: slsqp
+    max_iter: 500
+    ftol: 1.0e-10
+    fallback_max_rate: 0.05
+
+evaluation:
+  primary_metric: sharpe
+  bootstrap:
+    n_repetitions: 1000
+    block_length: 6
+    seed: 42
+  deflated_sharpe:
+    enabled: true
+    n_trials: 7
+  power:
+    alpha: 0.05
+    power: 0.80
+
+output:
+  runs_dir: "runs"
+  reports_dir: "reports"
+  save_plots: true

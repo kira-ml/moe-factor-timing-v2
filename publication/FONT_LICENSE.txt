@@ -1,0 +1,18 @@
+This publication embeds the following open-license fonts.
+
+SOURCE SERIF 4
+Copyright (c) 2014-2023 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'.
+Licensed under the SIL Open Font License, Version 1.1.
+Full license text: fonts/OFL-SourceSerif4.txt
+
+IBM PLEX SANS
+Copyright (c) 2017 IBM Corp. with Reserved Font Name "Plex".
+Licensed under the SIL Open Font License, Version 1.1.
+Full license text: fonts/OFL-IBMPlexSans.txt
+
+IBM PLEX MONO
+Copyright (c) 2017 IBM Corp. with Reserved Font Name "Plex".
+Licensed under the SIL Open Font License, Version 1.1.
+Full license text: fonts/OFL-IBMPlexMono.txt
+
+The fonts are embedded for document rendering. They are not sold or distributed as standalone font software.

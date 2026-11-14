@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this benchmark, please cite it and the Fama-French data source."
+title: "moe-factor-timing v2: A reproducible benchmark for probabilistic regime-aware factor allocation"
+version: "2.0.0"
+date-released: "2026-11-14"
+license: MIT
+authors:
+  - family-names: Talingting
+    given-names: Ken Ira Lacson
+repository-code: "https://github.com/kira-ml/moe-factor-timing-v2"
+keywords:
+  - factor timing
+  - mixture of experts
+  - regime switching
+  - portfolio allocation
+  - reproducible research
+references:
+  - type: article
+    title: "Common risk factors in the returns on stocks and bonds"
+    authors:
+      - family-names: Fama
+        given-names: Eugene F.
+      - family-names: French
+        given-names: Kenneth R.
+    journal: "Journal of Financial Economics"
+    volume: 33
+    issue: 1
+    start: 3
+    end: 56
+    year: 1993
