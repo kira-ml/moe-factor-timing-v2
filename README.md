@@ -66,6 +66,7 @@ The model is also miscalibrated in the tails: **10.9%** of PIT values fall in ea
 **Bottom line:** the MoE produced a small full-sample signal, but it did not survive the holdout or the pre-committed cost. 1/N remains hard to beat; the confirmatory holdout is inconclusive, not a win for either model.
 
 </details>
+
 <!-- RESULT_END -->
 
 The full report, including confidence intervals, calibration, turnover, power, and limitations, is in [`reports/v2_report.md`](reports/v2_report.md).
@@ -116,16 +117,13 @@ Each arrow can destroy value: a weak signal, an overconfident covariance, an opt
 
 ```mermaid
 flowchart LR
-    A[Ingest] --> B[Validate]
-    B --> C[Features]
-    C --> D[Walk-forward split]
-    D --> E[Models]
-    E --> F[Decision]
-    F --> G[Backtest]
-    G --> H[Evaluate]
-    H --> I[Report]
-    I --> J[Manifest]
+    A[Data] --> B[Features]
+    B --> C[Probabilistic model]
+    C --> D[Portfolio decision]
+    D --> E[Net evidence]
 ```
+
+The full pipeline is `ingest → validate → features → split → models → decision → backtest → evaluate → report → manifest`.
 
 Every boundary has a typed contract. The engine fails loudly on a model error, counts solver fallbacks, and refuses to publish a result if the fallback rate exceeds 5%. The manifest binds the result to its config, data snapshot, code commit, package versions, and artifact hashes.
 
