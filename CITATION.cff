@@ -9,6 +9,7 @@ authors:
     given-names: Ken Ira Lacson
 repository-code: "https://github.com/kira-ml/moe-factor-timing-v2"
 doi: "10.5281/zenodo.24280434"
+notes: "Revision 1 (2026-11-17) is a post-publication audit revision of the paper; the DOI archives v2.0.0. See paper/README.md."
 keywords:
   - factor timing
   - mixture of experts

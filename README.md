@@ -48,6 +48,8 @@ The MoE finds a small full-sample signal. It does **not** beat 1/N at the pre-co
 
 **MoE holdout net Sharpe by cost:** `0.551 → 0.479 → 0.336` at `5 → 10 → 20 bps`. The sign flips between 5 and 10 bps; the underlying gross difference is within noise.
 
+**Post-publication audit:** the full-sample signal is a one-month effect (rank IC `0.009` under a one-month information lag); the mean absolute risk gradient is `3.8%` of the mean absolute forecast gradient at risk aversion 2; the pre-specified H2 is rejected (static mean-variance `0.874/0.509` vs MoE `0.790/0.479` full/holdout); and the benchmark is universe-dependent (four-factor 1/N holdout `0.408`; market-only `0.652`). The negative net-Sharpe conclusion survives. See the paper Revision 1 and [`reports/lagged_information_check.json`](reports/lagged_information_check.json).
+
 > **The one-sentence lesson:** predictive signal, gross Sharpe, and net decision value are three different objects.
 
 <details>
@@ -57,7 +59,7 @@ The mixture-of-experts model **does not beat 1/N at the pre-committed 10 bps cos
 
 In the pre-committed 2006–2026 holdout, the MoE has a net Sharpe of **0.479** versus **0.505** for 1/N. The difference is **−0.026** with a block-bootstrap 95% confidence interval **`[−0.470, 0.389]`** (p = 0.862). The data cannot distinguish the two at the pre-committed confidence level; this is an **inconclusive** result, not evidence of equivalence.
 
-Over the full 1974–2026 out-of-sample window, 1/N is ahead: **1.059** versus **0.790** for the MoE (difference −0.269; 95% CI `[−0.518, 0.006]`). 1/N also wins all three subperiods.
+Over the full 1974–2026 out-of-sample window, 1/N has a higher point estimate: **1.059** versus **0.790** for the MoE (difference −0.269; 95% CI `[−0.518, 0.006]`; p = 0.058). The interval includes zero, so the full-sample difference is borderline and not statistically significant at the 5% level. 1/N also has a higher Sharpe point estimate in all three subperiods; no subperiod difference is tested for significance.
 
 The gross/net decomposition is informative but is **not** a positive-alpha claim. The MoE's full-sample cross-sectional information coefficient is **0.057** (HAC t = 2.97), but the 2006–2026 holdout IC is **0.040** (t = 1.35), and the holdout gross Sharpe difference (0.622 vs 0.511) has a 95% CI **`[−0.324, 0.514]`**. The holdout gross edge is not statistically confirmed.
 
@@ -101,7 +103,7 @@ See [`docs/01_problem_framing.md`](docs/01_problem_framing.md) for the full scop
 | 3-expert linear-Gaussian MoE | Small, tractable probabilistic model |
 | Block bootstrap, HAC IC, PIT/KS, MDE, DSR | Dependence, calibration, power, and selection diagnostics |
 
-**Validation:** 242/242 independent checks passed, and 41/41 compared artifacts reproduced identically in a fresh run. See [`docs/13_validation_report.md`](docs/13_validation_report.md).
+**Validation:** 242/242 independent recomputation checks passed (internal audit), and 41/41 compared artifacts reproduced identically in a fresh run. See [`docs/13_validation_report.md`](docs/13_validation_report.md) and the post-publication audit in [`reports/paper_audit_checks.json`](reports/paper_audit_checks.json).
 
 ---
 
@@ -208,7 +210,7 @@ For a guided first run, open [`notebooks/quickstart.ipynb`](notebooks/quickstart
 
 | Document | What it answers |
 |:---|:---|
-| [`paper/moe_factor_timing_benchmark.pdf`](paper/moe_factor_timing_benchmark.pdf) | Research paper: methodology, results, discussion, and limitations |
+| [`paper/moe_factor_timing_benchmark.pdf`](paper/moe_factor_timing_benchmark.pdf) | Research paper: methodology, results, discussion, and limitations · Revision 1 (post-publication audit) |
 | [`notebooks/quickstart.ipynb`](notebooks/quickstart.ipynb) | Guided smoke run and metrics table |
 | [`reports/v2_report.md`](reports/v2_report.md) | Full report: intervals, calibration, turnover, power, and limitations |
 | [`publication/one_pager.pdf`](publication/one_pager.pdf) | One-page research summary |

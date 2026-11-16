@@ -1,0 +1,20 @@
+{
+  "description": "Post-publication audit: three-restart reference run.",
+  "config": "configs/restart3.yaml",
+  "n_restarts": 3,
+  "n_decisions": 627,
+  "holdout_months": 248,
+  "moe": {
+    "full_net_sharpe": 0.8277703907856078,
+    "holdout_net_sharpe": 0.43865038834398784,
+    "full_rank_ic": 0.0700,
+    "holdout_rank_ic": 0.0255,
+    "full_rank_ic_hac_t": 3.436,
+    "holdout_rank_ic_hac_t": 0.871
+  },
+  "benchmark": {
+    "six_factor_one_over_n_full_net_sharpe": 1.059323532256245,
+    "six_factor_one_over_n_holdout_net_sharpe": 0.5045710494335608
+  },
+  "note": "The negative conclusion survives: the MoE remains below the six-factor 1/N in both samples. The point estimates move relative to the one-restart reference, so the single-restart numbers are one draw."
+}

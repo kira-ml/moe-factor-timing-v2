@@ -12,6 +12,9 @@ This directory contains the curated, version-controlled outputs of the reference
 | `moe_stability.json` | Restart-stability audit on 24 training windows |
 | `red_team_checks.json` | Publication-gate checks: cost sensitivity, gross/net uncertainty, IC HAC/bootstrap |
 | `red_team_cost_sensitivity.csv` | Holdout net Sharpe by cost assumption |
+| `paper_audit_checks.json` | Post-publication audit: block-permutation nulls, signal delay, gating entropy |
+| `lagged_information_check.json` | Post-publication audit: one-month information-lag IC and HAC t-statistics |
+| `restart3_metrics.json` | Post-publication audit: three-restart reference metrics |
 | `figures/` | Cumulative wealth, drawdowns, rolling Sharpe, weights, gating, PIT |
 
 The authoritative run artifacts, including the manifest and per-model files, are in `runs/reference/`. `runs/` is git-ignored because it contains the full data snapshot and binary covariance arrays.

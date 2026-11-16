@@ -1,0 +1,30 @@
+{
+  "description": "Walk-forward MoE with features shifted one month (information through t-1).",
+  "n_decisions": 626,
+  "first_decision": "1974-07-31",
+  "last_decision": "2026-08-31",
+  "holdout_start": "2006-01-31",
+  "ic": {
+    "full": {
+      "n_months": 626,
+      "rank_ic": 0.009341798956064847,
+      "rank_hac_t": 0.4975524199079349,
+      "pearson_ic": 0.018515836151637093,
+      "pearson_hac_t": 0.9475091923558249
+    },
+    "pre_holdout": {
+      "n_months": 378,
+      "rank_ic": -0.0071850640400277525,
+      "rank_hac_t": -0.28130679418397214,
+      "pearson_ic": -0.00250207919586525,
+      "pearson_hac_t": -0.09447843284165709
+    },
+    "holdout": {
+      "n_months": 248,
+      "rank_ic": 0.03453193690978663,
+      "rank_hac_t": 1.3081481964014685,
+      "pearson_ic": 0.05055120712484631,
+      "pearson_hac_t": 1.8386335394683544
+    }
+  }
+}

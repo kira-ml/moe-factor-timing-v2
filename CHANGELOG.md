@@ -1,5 +1,28 @@
 # Changelog
 
+## Post-publication revision - 2026-11-17
+
+Paper Revision 1, after an internal red-team audit.
+
+### Changed
+
+- Paper: the full-sample 1/N comparison now states the point estimate is borderline (p = 0.058; 95% CI includes zero), not that 1/N “wins” or “dominates.”
+- Paper: “242 independent validation” is reworded to “242 independent recomputation (internal audit).”
+- Paper: turnover is defined as one-way (half the traded notional); costs are 10 bps per side, 20 bps round-trip.
+- Paper: “net Sharpe” is labelled as net of allocation-layer costs only; factor-sleeve costs are excluded.
+- Paper: added post-publication audit diagnostics (block-permutation null, signal delay, gating entropy) and expanded limitations.
+- `paper/README.md`: Revision 1 metadata, abstract, and reproducibility note.
+- `scripts/paper_audit_checks.py` and `reports/paper_audit_checks.json`: reproducible audit diagnostics.
+- `scripts/lagged_information_check.py` and `reports/lagged_information_check.json`: one-month information-lag test.
+- `configs/restart3.yaml` and `reports/restart3_metrics.json`: three-restart reference run.
+- Paper: added the information-set lag, covariance-materiality, H2, and nested-benchmark findings; narrowed the abstract and conclusion accordingly.
+- README and `docs/13_validation_report.md`: distinguish internal recomputation from independent replication and record the post-publication audit scope.
+
+### Notes
+
+- The v2.0.0 PDF remains archived at DOI [10.5281/zenodo.24280434](https://doi.org/10.5281/zenodo.24280434).
+- The revised PDF is `paper/moe_factor_timing_benchmark.pdf` (Revision 1).
+
 ## 2.0.0 - Public release - 2026-11-16
 
 First public release of the reproducible benchmark.
@@ -19,7 +42,7 @@ First public release of the reproducible benchmark.
 
 - 45 tests passing; Ruff clean; 12/12 data checks.
 - Fresh reference run reproduced 41/41 compared artifacts identically.
-- 242/242 independent validation checks passed.
+- 242/242 independent recomputation checks passed (internal audit).
 - Public tree contains no raw data, archive, or run artifacts.
 
 ## Pre-release 2.0.3 - 2026-11-16

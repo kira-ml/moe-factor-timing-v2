@@ -28,5 +28,5 @@
       "scheme": "url"
     }
   ],
-  "notes": "The raw Ken French panel and the V1 archive are not part of this release. The code is MIT-licensed; the paper is provided as research documentation. This is not investment advice."
+  "notes": "The raw Ken French panel and the V1 archive are not part of this release. The code is MIT-licensed; the paper is provided as research documentation. This is not investment advice. Revision 1 (2026-11-17) is a post-publication audit revision of the paper; the archived record is v2.0.0."
 }

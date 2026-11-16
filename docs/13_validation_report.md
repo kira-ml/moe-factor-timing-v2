@@ -1,4 +1,4 @@
-# 13 - Independent Validation Report
+# 13 - Validation Report: Reproducibility and Public-Release Audit
 
 **Status:** Validation gate
 **Date:** 2026-11-16
@@ -10,6 +10,8 @@
 ## 1. Verdict
 
 **No unresolved critical issue was found.** The implementation, reference run, and public-release tree are consistent with the reported negative/inconclusive result. The project is complete for the scope it claims: a reproducible benchmark, not a live trading strategy.
+
+> **Post-publication audit (2026-11-17).** A later red-team audit found issues outside the scope of this reproducibility report: the full-sample signal is a one-month effect (rank IC 0.009 under a one-month information lag), the covariance is not material at the reference risk aversion (3.8% of the mean gradient), the pre-specified H2 is rejected (static mean-variance beats the MoE in both samples), and the six-factor 1/N is a hindsight benchmark (four-factor 1/N holdout 0.408; market-only 0.652). These findings are incorporated in paper Revision 1. This report remains a reproducibility audit, not a re-analysis of the hypothesis.
 
 The validation found **documentation precision issues**, not result errors:
 
