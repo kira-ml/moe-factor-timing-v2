@@ -1,5 +1,32 @@
 # Changelog
 
+## 2.0.3 - 2026-11-16
+
+Validation and public-release remediation.
+
+### Added
+
+- `docs/13_validation_report.md`: independent reproducibility audit, 242 checks, and public-release verification.
+- Public repository `kira-ml/moe-factor-timing-v2` with clean history and 120 tracked files.
+- README validation summary and redesigned research-first structure.
+
+### Changed
+
+- `docs/11_red_team_validation.md`: publication checklist marked complete.
+- `docs/12_legal_ethical_security_review.md`: history risk resolved for the public link; legacy repository private.
+- `docs/10_reference_run.md`: fresh-run reproducibility note added.
+
+### Verified
+
+- Ruff clean; 45 tests passing; data contract 12/12.
+- Fresh reference run reproduced 41/41 compared artifacts identically.
+- 242/242 independent numerical and accounting checks passed.
+- Public tree has no raw Ken French panel, no V1 archive, and no `runs/`.
+
+### Residual
+
+- Raw-data redistribution terms remain unresolved; the public tree ships a downloader, not the data.
+
 ## 2.0.2 - 2026-11-14
 
 Publication-safety and attribution pass.

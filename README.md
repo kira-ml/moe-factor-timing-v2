@@ -99,6 +99,8 @@ See [`docs/01_problem_framing.md`](docs/01_problem_framing.md) for the full scop
 | 3-expert linear-Gaussian MoE | Small, tractable probabilistic model |
 | Block bootstrap, HAC IC, PIT/KS, MDE, DSR | Dependence, calibration, power, and selection diagnostics |
 
+**Validation:** 242/242 independent checks passed, and 41/41 compared artifacts reproduced identically in a fresh run. See [`docs/13_validation_report.md`](docs/13_validation_report.md).
+
 ---
 
 ## Why this matters
@@ -211,6 +213,7 @@ python -m ruff check .
 | [`docs/10_reference_run.md`](docs/10_reference_run.md) | Reference run manifest and verification record |
 | [`docs/11_red_team_validation.md`](docs/11_red_team_validation.md) | Publication gate and red-team findings |
 | [`docs/12_legal_ethical_security_review.md`](docs/12_legal_ethical_security_review.md) | Data, licensing, font, secrets, and publication-safety review |
+| [`docs/13_validation_report.md`](docs/13_validation_report.md) | Independent reproducibility audit, 242 checks, public-release verification |
 
 ---
 

@@ -5,6 +5,8 @@
 **Reviewer stance:** skeptical external referee
 **Question:** Is the V2 result robust and defensible enough to publish as a one-page research note?
 
+> **Validation update (2026-11-16).** A fresh run at current HEAD reproduced all 41 compared artifacts identically, and 242 independent checks passed. See [`13_validation_report.md`](13_validation_report.md). The gate decision below is unchanged.
+
 ---
 
 ## 1. Gate decision
@@ -98,9 +100,9 @@ A one-page research note with the thesis:
 - [x] Recompute holdout cost sensitivity and gross/IC uncertainty.
 - [x] Document the gate in this file.
 - [x] Correct README, `docs/09`, and `docs/10` to distinguish full-sample vs holdout IC.
-- [ ] Ensure the one-pager shows the 5/10/20 bps crossover and the holdout IC insignificance.
-- [ ] Use "pre-committed", not "pre-registered", in public-facing copy.
-- [ ] Disclose the single-initialization and reconstructed-data limitations in the one-pager footer.
+- [x] Ensure the one-pager shows the 5/10/20 bps crossover and the holdout IC insignificance.
+- [x] Use "pre-committed", not "pre-registered", in public-facing copy.
+- [x] Disclose the single-initialization and reconstructed-data limitations in the one-pager.
 
 ---
 

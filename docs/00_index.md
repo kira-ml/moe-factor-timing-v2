@@ -22,6 +22,7 @@
 | 10 | `10_reference_run.md` | Reference run manifest, results, and verification record |
 | 11 | `11_red_team_validation.md` | Publication gate: what survives, what does not, and required corrections |
 | 12 | `12_legal_ethical_security_review.md` | Data licensing, fonts, secrets, and public-history review |
+| 13 | `13_validation_report.md` | Independent reproducibility audit, 242 checks, public-release verification |
 | - | `../DECISIONS.md` | Material decisions, assumptions, review dates |
 | - | `../README.md` | Project overview and headline result |
 | - | `../reports/v2_report.md` | Generated reference report |
@@ -36,8 +37,9 @@
 | V1 archive | Frozen, fingerprinted, read-only; local-only, excluded from public git tree |
 | V2 data snapshot | Local-only (759 monthly observations, 1963-07 to 2026-09); not redistributed |
 | V2 reference config | Frozen before the reference run |
-| V2 implementation | Complete; 45 tests passing |
+| V2 implementation | Complete; 45 tests passing; Ruff clean |
 | V2 reference run | Complete; see `docs/10_reference_run.md` and `reports/v2_report.md` |
+| V2 validation | Complete; 242/242 independent checks and 41/41 reproduced artifacts; see `docs/13_validation_report.md` |
 | Prior V2 attempt | Preserved in the private development repository; not in this public release |
 
 ---

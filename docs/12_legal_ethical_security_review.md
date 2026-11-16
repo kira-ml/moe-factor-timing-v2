@@ -1,9 +1,11 @@
 # 12 - Legal, Ethical, and Security Review
 
 **Status:** Publication gate
-**Date:** 2026-11-14
+**Date:** 2026-11-14; updated 2026-11-16
 **Scope:** the local repository, the one-page publication, and the public GitHub link.
 **Reviewer:** AI-assisted compliance audit. **This is not legal advice.** Items marked "professional review" require qualified counsel.
+
+> **Update (2026-11-16).** The public release now lives in a fresh repository, [`kira-ml/moe-factor-timing-v2`](https://github.com/kira-ml/moe-factor-timing-v2), with clean history. The legacy repository is private. The public-history residual identified in the 2026-11-14 review is resolved for the public link. The local development repository still contains the old history.
 
 ---
 
@@ -18,11 +20,11 @@
 | Personal data | **Confirmed** | Aggregate market data only; no PII beyond the author's name. |
 | Ken French data | **Unresolved** | Copyright notice, no explicit redistribution license. Raw CSV removed from the public tree; downloader provided. |
 | V1 archive data | **Unresolved** | Contains third-party ETF/VIX/FRED data. Kept local-only; removed from the public tree. |
-| Git history | **Unresolved** | Earlier public commits still contain the raw data and archive. A clean public release requires a history rewrite or a fresh repository. |
+| Git history | **Resolved for the public link** | Fresh public repository `kira-ml/moe-factor-timing-v2` with clean history; legacy repository private. Local development history is not public. |
 | Research claims | **Confirmed after red-team gate** | Negative/inconclusive result, confidence intervals, cost sensitivity, calibration, and limitations disclosed. |
-| LinkedIn publication | **Conditional** | The one-pager is safe as a research note. The public repo link carries residual history risk until the history is cleaned. |
+| LinkedIn publication | **Approved** | The one-pager is safe as a research note; the public link points to a clean repository. |
 
-**Gate decision:** The one-page research note is approved for publication as a negative/inconclusive research note. The **public repository link is approved at HEAD only after the data/archive cleanup commit**, but the **history remains a residual concern**. For a fully clean public release, use a fresh repository or rewrite history before linking it.
+**Gate decision:** The one-page research note is approved for publication as a negative/inconclusive research note. The public repository link is approved: it points to a fresh repository with clean history, 120 tracked files, no raw Ken French panel, no V1 archive, and no `runs/`. The legacy development repository is private. Raw-data **redistribution** remains unresolved; the public tree ships a downloader, not the data.
 
 ---
 
@@ -36,7 +38,7 @@
 - **Redistribution:** Not explicitly granted. Free access to use is not the same as permission to redistribute.
 - **Action taken:** The raw `data/reference/factors.csv` is removed from the public git tree and kept local-only. The repository ships a downloader (`scripts/fetch_reference_data.py`) and provenance metadata (`data/reference/metadata.json`).
 - **Status:** **Unresolved for redistribution.** Professional review is recommended if the raw panel is to be redistributed.
-- **Residual:** Earlier public commits still contain the CSV. See Section 7.
+- **Residual:** The raw CSV is absent from the public tree and public history. The legacy development repository is private.
 
 ### 2.2 V1 archive
 
@@ -45,7 +47,7 @@
 - **Instruction:** The archive must be preserved without modification.
 - **Action taken:** The archive remains on disk, byte-identical and fingerprinted, but is removed from the public git tree and ignored. Its local fingerprint is checked by `tests/test_manifest.py` when present.
 - **Status:** **Unresolved for public disclosure.** Professional review or removal from the public history is required.
-- **Residual:** Earlier public commits still contain the archive. See Section 7.
+- **Residual:** The archive is absent from the public tree and public history. The legacy development repository is private.
 
 ### 2.3 FRED
 
@@ -106,8 +108,8 @@ No GPL/AGPL runtime dependency was found. The dependencies are installed by the 
 
 ### Residual
 
-- The public GitHub history still contains the raw Ken French snapshot and V1 archive from earlier commits. This is a data-disclosure exposure, not a credential exposure.
-- The public repository may be indexed or cached by third parties even after a history rewrite.
+- The public repository has clean history and contains no raw Ken French panel or V1 archive. The legacy development repository still contains the old history, but it is private.
+- The public repository may be indexed or cached by third parties; because it contains no raw third-party data, the residual is reputational rather than data-disclosure.
 - If the FRED key was ever used in a public notebook or shared environment, rotate it as a precaution. No evidence of exposure was found in this repository.
 
 ---
@@ -128,29 +130,21 @@ No GPL/AGPL runtime dependency was found. The dependencies are installed by the 
 | Author name and GitHub link | Added at the author's request. |
 | Self-promotional language | Avoided; no bio, effort claims, or adjectives about the work. |
 | Fonts | Source Serif 4 / IBM Plex subsets; SIL OFL 1.1 license included. |
-| Data redistribution | Raw data removed from public tree; history residual. |
+| Data redistribution | Raw data absent from the public tree and public history; legacy repository private. |
 
 ---
 
 ## 7. Public GitHub history
 
-The current working tree is clean at HEAD, but the repository is already public and earlier commits contain:
+The 2026-11-14 review identified a residual history risk in the original public repository. Remediation was executed:
 
-- `data/reference/factors.csv` (Ken French panel)
-- `archive/v1/data/**` (ETF, VIX, FRED data)
-- `archive/v1/results/**` (derived V1 outputs)
+- The public release now lives in a **fresh repository**, [`kira-ml/moe-factor-timing-v2`](https://github.com/kira-ml/moe-factor-timing-v2), created from a clean orphan snapshot.
+- The public tree contains **120 tracked files**, no `archive/`, no `data/reference/factors.csv`, and no `runs/`.
+- The public git history is clean: the raw Ken French panel and the V1 archive were never committed to the new repository.
+- The legacy repository `kira-ml/mixture-of-experts-factor-timing` was made **private**.
+- The local development repository still contains the old history, but it is not public and must not be linked publicly.
 
-Removing these from the current tree does **not** remove them from git history. A reader can browse old commits or clone the repository and check out an earlier commit.
-
-**Options:**
-
-1. **Fresh public repository (recommended).** Create a new repository from the cleaned HEAD with no history. Keep the current repository private or archive it. This is the cleanest compliance path.
-2. **History rewrite.** Use `git filter-repo` or BFG to remove the data/archive from all commits, then force-push. This is destructive and requires explicit approval and a backup.
-3. **Accept the residual risk.** Publish the link with a disclosure that the historical archive contains third-party data and is not covered by the MIT license. This is not a clean legal position.
-
-The one-pager can be published without the repository link. If the link is included, option 1 or 2 is recommended before publication.
-
-**Prepared remediation:** A local orphan branch `public-release` (see `git log -1 public-release`) contains a single clean public snapshot: 120 tracked files, no `archive/`, no `data/reference/factors.csv`, and no `runs/`. It has not been pushed. It can be pushed to a new repository or force-pushed to `main` after an explicit decision.
+**Residual:** raw-data redistribution terms remain unresolved; do not redistribute the raw panel. Third-party caches or indexes of the legacy public repository may persist, but the legacy repository is private and the public release contains no raw data or archive.
 
 ---
 
@@ -164,8 +158,8 @@ The one-pager can be published without the repository link. If the link is inclu
 - [x] Add `NOTICE`, `THIRD_PARTY_NOTICES.md`, and this review.
 - [x] Confirm no secrets in current tree or git history.
 - [x] Confirm the claims passed the red-team gate.
-- [ ] Decide on history remediation (fresh repo, history rewrite, or accept residual risk).
-- [ ] If publishing the link before history remediation, add a disclosure that the historical archive is not MIT-licensed and contains third-party data.
+- [x] Decide on history remediation: fresh public repository, legacy repository private.
+- [x] Point the public link at the clean repository; the historical-data disclosure is no longer required for the public link.
 - [ ] If the raw data must be redistributed, obtain permission or professional legal review.
 - [ ] Check platform-specific AI-disclosure and financial-promotion rules for LinkedIn.
 
@@ -175,8 +169,8 @@ The one-pager can be published without the repository link. If the link is inclu
 
 **One-pager:** approved as a negative/inconclusive research note. The name and repository link are included naturally, and the page is not self-promotional.
 
-**Repository HEAD:** approved after the cleanup commit, with the data and archive excluded and the downloader documented.
+**Repository HEAD:** approved. The public repository contains no raw Ken French panel, no V1 archive, and no `runs/`; the downloader and provenance metadata are documented.
 
-**Repository history:** **not clean.** The public history still contains third-party data. For a fully clean public release, use a fresh repository or rewrite history. Until then, the GitHub link carries a residual legal/disclosure risk.
+**Repository history:** **clean for the public repository.** The legacy development repository remains private. Raw-data redistribution remains unresolved, so the public repository must not add the raw panel or archive.
 
-**Overall:** **Conditional pass.** Publish the research note; treat the repository link as conditional on history remediation or an explicit disclosure. This is not legal advice; obtain professional review for the data-redistribution question.
+**Overall:** **Pass for the public release**, with the data-redistribution question still requiring professional review if the raw panel is ever to be redistributed. This is not legal advice.

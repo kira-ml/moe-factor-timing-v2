@@ -10,6 +10,8 @@
 **Manifest:** `runs/reference/manifest.json`
 **Artifacts hashed:** 79
 
+> **Validation update (2026-11-16).** A fresh run at current HEAD `1e42680` with the same config and data reproduced **41/41 compared artifacts identically**, including returns, weights, forecasts, covariance arrays, bootstrap tables, calibration, and subperiods. The core model, backtest, and evaluation code is unchanged from the recorded commit. **242/242 independent checks passed.** See [`13_validation_report.md`](13_validation_report.md).
+
 ---
 
 ## 1. Design
