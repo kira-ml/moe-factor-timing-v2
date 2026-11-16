@@ -24,7 +24,7 @@
 | Research claims | **Confirmed after red-team gate** | Negative/inconclusive result, confidence intervals, cost sensitivity, calibration, and limitations disclosed. |
 | LinkedIn publication | **Approved** | The one-pager is safe as a research note; the public link points to a clean repository. |
 
-**Gate decision:** The one-page research note is approved for publication as a negative/inconclusive research note. The public repository link is approved: it points to a fresh repository with clean history, 120 tracked files, no raw Ken French panel, no V1 archive, and no `runs/`. The legacy development repository is private. Raw-data **redistribution** remains unresolved; the public tree ships a downloader, not the data.
+**Gate decision:** The one-page research note is approved for publication as a negative/inconclusive research note. The public repository link is approved: it points to a fresh repository with clean history, no raw Ken French panel, no V1 archive, and no `runs/`. The legacy development repository is private. Raw-data **redistribution** remains unresolved; the public tree ships a downloader, not the data.
 
 ---
 
@@ -139,7 +139,7 @@ No GPL/AGPL runtime dependency was found. The dependencies are installed by the 
 The 2026-11-14 review identified a residual history risk in the original public repository. Remediation was executed:
 
 - The public release now lives in a **fresh repository**, [`kira-ml/moe-factor-timing-v2`](https://github.com/kira-ml/moe-factor-timing-v2), created from a clean orphan snapshot.
-- The public tree contains **120 tracked files**, no `archive/`, no `data/reference/factors.csv`, and no `runs/`.
+- The public tree contains no `archive/`, no `data/reference/factors.csv`, and no `runs/`.
 - The public git history is clean: the raw Ken French panel and the V1 archive were never committed to the new repository.
 - The legacy repository `kira-ml/mixture-of-experts-factor-timing` was made **private**.
 - The local development repository still contains the old history, but it is not public and must not be linked publicly.

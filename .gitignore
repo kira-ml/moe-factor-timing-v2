@@ -12,6 +12,9 @@ __pycache__/
 build/
 dist/
 
+# Notebooks
+.ipynb_checkpoints/
+
 # Generated run artifacts
 runs/
 

@@ -1,6 +1,27 @@
 # Changelog
 
-## 2.0.3 - 2026-11-16
+## 2.0.0 - Public release - 2026-11-16
+
+First public release of the reproducible benchmark.
+
+### Added
+
+- GitHub Actions CI: Ruff, tests, and a public-tree guard.
+- `constraints.txt`: pinned reference environment.
+- `notebooks/quickstart.ipynb`: guided smoke run.
+- `docs/14_extension_guide.md`: how to add a model to the registry.
+- `CONTRIBUTING.md`: development checks and contribution rules.
+- `paper/moe_factor_timing_benchmark.pdf`: full research paper.
+- `.zenodo.json`: archive metadata for the v2.0.0 release.
+
+### Verified
+
+- 45 tests passing; Ruff clean; 12/12 data checks.
+- Fresh reference run reproduced 41/41 compared artifacts identically.
+- 242/242 independent validation checks passed.
+- Public tree contains no raw data, archive, or run artifacts.
+
+## Pre-release 2.0.3 - 2026-11-16
 
 Validation and public-release remediation.
 
@@ -27,7 +48,7 @@ Validation and public-release remediation.
 
 - Raw-data redistribution terms remain unresolved; the public tree ships a downloader, not the data.
 
-## 2.0.2 - 2026-11-14
+## Pre-release 2.0.2 - 2026-11-14
 
 Publication-safety and attribution pass.
 
@@ -49,7 +70,7 @@ Publication-safety and attribution pass.
 
 - Earlier public commits still contain the raw data and archive; a fully clean public release requires a fresh repository or a history rewrite.
 
-## 2.0.1 - 2026-11-14
+## Pre-release 2.0.1 - 2026-11-14
 
 Pre-publication red-team validation.
 

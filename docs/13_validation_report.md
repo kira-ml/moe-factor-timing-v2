@@ -88,7 +88,7 @@ A separate audit script recomputed the headline metrics from raw weights, return
 ### 2.6 Public-release audit
 
 - Public repository: [`kira-ml/moe-factor-timing-v2`](https://github.com/kira-ml/moe-factor-timing-v2).
-- **120 tracked files**.
+- **121 tracked files at the time of the audit**; the release surface adds CI, a notebook, an extension guide, and the paper.
 - No `archive/`, no `data/reference/factors.csv`, no `runs/`.
 - The raw Ken French panel is downloaded locally, not redistributed.
 - The legacy repository `kira-ml/mixture-of-experts-factor-timing` returns 404 to unauthenticated requests (private).

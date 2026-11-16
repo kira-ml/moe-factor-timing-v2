@@ -1,0 +1,32 @@
+{
+  "title": "moe-factor-timing v2: A reproducible benchmark for probabilistic regime-aware factor allocation",
+  "description": "A reproducible benchmark for probabilistic regime-aware factor allocation. The release contains the code, tests, documentation, reference report, and research paper. The raw Ken French factor panel and the Version 1 archive are not redistributed; the repository provides a downloader, provenance metadata, and SHA-256 checksums. The result is a rigorous negative/inconclusive benchmark, not a live trading strategy or investment advice.",
+  "creators": [
+    {
+      "name": "Talingting, Ken Ira Lacson",
+      "affiliation": "Independent Researcher"
+    }
+  ],
+  "upload_type": "software",
+  "license": "mit",
+  "access_right": "open",
+  "language": "eng",
+  "version": "2.0.0",
+  "publication_date": "2026-11-16",
+  "keywords": [
+    "factor timing",
+    "mixture of experts",
+    "regime models",
+    "portfolio allocation",
+    "transaction costs",
+    "reproducible research"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/kira-ml/moe-factor-timing-v2",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "The raw Ken French panel and the V1 archive are not part of this release. The code is MIT-licensed; the paper is provided as research documentation. This is not investment advice."
+}

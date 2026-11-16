@@ -5,6 +5,7 @@
 **A reproducible benchmark for probabilistic regime-aware factor allocation.**
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-173B57?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![CI](https://github.com/kira-ml/moe-factor-timing-v2/actions/workflows/ci.yml/badge.svg)](https://github.com/kira-ml/moe-factor-timing-v2/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-7A2633?style=flat-square)](LICENSE)
 [![Status: research benchmark](https://img.shields.io/badge/status-research%20benchmark-A3854F?style=flat-square)](#what-this-is)
 [![Result: inconclusive](https://img.shields.io/badge/result-inconclusive-7A2633?style=flat-square)](#key-result)
@@ -147,7 +148,7 @@ venv\Scripts\activate
 # macOS / Linux
 # source venv/bin/activate
 
-python -m pip install -e ".[dev]"
+python -m pip install -e ".[dev]" -c constraints.txt
 ```
 
 ### 2. Fetch the reference panel
@@ -175,22 +176,29 @@ python -m pytest tests/ -q
 python -m ruff check .
 ```
 
+For a guided first run, open [`notebooks/quickstart.ipynb`](notebooks/quickstart.ipynb). It validates the data, runs the smoke configuration, and displays the metrics table. The smoke run is an implementation check, not the research result.
+
 ---
 
 ## Repository map
 
 | Path | Contents |
 |:---|:---|
+| `.github/workflows/` | CI: lint, tests, and the public-tree guard |
 | `configs/` | Reference and smoke configurations |
+| `constraints.txt` | Pinned reference environment |
 | `data/reference/` | Provenance metadata and downloader; raw CSV is local-only |
-| `docs/` | Problem framing, data contract, methodology, protocol, architecture, lessons, review |
+| `docs/` | Problem framing, data contract, methodology, protocol, architecture, lessons, validation, extension guide |
+| `notebooks/` | Quickstart notebook for the smoke configuration |
+| `paper/` | Research paper PDF and citation record |
 | `reports/` | Curated reference report and figures |
 | `runs/` | Immutable run artifacts (git-ignored) |
-| `scripts/` | Data refresh and analysis entry points |
+| `scripts/` | Data refresh, analysis, and public-tree guard |
 | `src/moe_factor_timing/` | Installable package |
 | `tests/` | Contract, leakage, accounting, evaluation, and end-to-end tests |
 | `publication/` | One-page research note (PDF/PNG) and build source |
 | `archive/v1/` | Version 1 reference (local-only, read-only, fingerprinted) |
+| `CONTRIBUTING.md` | Development checks and contribution rules |
 | `DECISIONS.md` | Material decisions and review dates |
 
 ---
@@ -199,6 +207,8 @@ python -m ruff check .
 
 | Document | What it answers |
 |:---|:---|
+| [`paper/moe_factor_timing_benchmark.pdf`](paper/moe_factor_timing_benchmark.pdf) | Research paper: methodology, results, discussion, and limitations |
+| [`notebooks/quickstart.ipynb`](notebooks/quickstart.ipynb) | Guided smoke run and metrics table |
 | [`reports/v2_report.md`](reports/v2_report.md) | Full report: intervals, calibration, turnover, power, and limitations |
 | [`publication/one_pager.pdf`](publication/one_pager.pdf) | One-page research summary |
 | [`docs/01_problem_framing.md`](docs/01_problem_framing.md) | Research question, hypotheses, scope, falsification |
@@ -214,6 +224,7 @@ python -m ruff check .
 | [`docs/11_red_team_validation.md`](docs/11_red_team_validation.md) | Publication gate and red-team findings |
 | [`docs/12_legal_ethical_security_review.md`](docs/12_legal_ethical_security_review.md) | Data, licensing, font, secrets, and publication-safety review |
 | [`docs/13_validation_report.md`](docs/13_validation_report.md) | Independent reproducibility audit, 242 checks, public-release verification |
+| [`docs/14_extension_guide.md`](docs/14_extension_guide.md) | How to add a model to the registry and evaluate it |
 
 ---
 
@@ -229,6 +240,14 @@ python -m ruff check .
 | The raw Ken French panel and the V1 archive are not redistributed. | They remain local-only reference material. |
 
 The full list is in the report and [`docs/08_risk_register.md`](docs/08_risk_register.md).
+
+---
+
+## Contributing
+
+Contributions are welcome when they preserve the evidence contract and the public-tree rules. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) for the development setup, checks, and pull-request expectations. To add a model, follow [`docs/14_extension_guide.md`](docs/14_extension_guide.md).
+
+The public-tree guard runs in CI and fails if `archive/`, `runs/`, `data/reference/factors.csv`, `.env`, or a local virtual environment is tracked by git.
 
 ---
 

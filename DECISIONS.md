@@ -197,9 +197,26 @@
 - **Assumptions:** The archive remains byte-identical locally; the fingerprint test skips when the archive is absent from a clean clone; the downloader can restore the Ken French panel.
 - **Expected outcome:** A clean HEAD and a ready-to-push public snapshot, with the history risk disclosed.
 - **Review date:** 2027-06-30
-- **Outcome:** HEAD cleaned; raw data and archive removed from the public tree and retained locally. `public-release` branch created with a single clean commit (120 tracked files, no archive/data/runs). The public remote has not been pushed or rewritten; the GitHub link remains conditional on that decision.
+- **Outcome:** Executed and superseded by a fresh public repository. `kira-ml/moe-factor-timing-v2` is public with clean history (121 tracked files at the release audit, no archive/data/runs); the legacy repository is private. The public link now points to the clean repository. See `docs/12_legal_ethical_security_review.md` and `docs/13_validation_report.md`.
 
 ---
+
+## D13 - Release scope: polish and distribute; do not build a platform yet
+
+- **Date:** 2026-11-16
+- **Status:** Decided
+- **Options:**
+  1. Freeze the current release.
+  2. Spend 25–35 hours on CI, reproducibility, documentation, a preprint, and targeted feedback.
+  3. Run the `min_train`/`K` robustness grid and update the paper.
+  4. Build a multi-asset benchmark platform or leaderboard.
+  5. Aggressive promotion.
+- **Decision:** Option 2. Defer options 3 and 4 until there is external demand or a collaborator.
+- **Rationale:** The binding constraint is distribution and usability, not model capability. The platform option is dominated under the decision memo's expected-utility model (200 hours, maintenance burden, low probability of strong adoption for a solo maintainer). Option 2 has bounded downside and open upside.
+- **Assumptions:** Demand estimates are subjective; the 35-hour cap is binding; no raw data is redistributed; the paper is an independent working paper, not a venue submission.
+- **Expected outcome:** A usable, citable release; measurable feedback; a freeze if demand is weak.
+- **Review date:** 2026-12-07
+- **Outcome:** In progress. Week 1 implements CI, pinned constraints, quickstart notebook, extension guide, paper packaging, and release metadata.
 
 ---
 

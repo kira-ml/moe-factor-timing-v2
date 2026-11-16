@@ -10,6 +10,7 @@ from conftest import synthetic_market
 
 from moe_factor_timing.run.orchestrator import run_pipeline
 from moe_factor_timing.utils.io import read_json, write_json
+from moe_factor_timing.utils.paths import project_root
 
 
 def _write_reference(tmp_path: Path, market) -> Path:
@@ -85,7 +86,8 @@ def test_end_to_end_and_determinism(tmp_path):
         manifest = read_json(run_dir / "manifest.json")
         assert manifest["validation"]["passed"] is True
         assert manifest["artifacts"]
-        assert manifest["archive_fingerprint"]["file_count"] == 183
+        expected_archive_files = 183 if (project_root() / "archive").exists() else 0
+        assert manifest["archive_fingerprint"]["file_count"] == expected_archive_files
         assert "Verdict" in (run_dir / "report" / "report.md").read_text(encoding="utf-8")
 
     for model in ("one_over_n", "ridge", "moe"):

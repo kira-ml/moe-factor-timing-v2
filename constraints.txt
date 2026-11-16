@@ -1,0 +1,13 @@
+# Pinned reference environment for Python 3.10.
+# Install with:
+#   python -m pip install -e ".[dev]" -c constraints.txt
+#
+# These are the versions recorded in the reference run manifest.
+numpy==1.26.4
+pandas==2.3.0
+scipy==1.15.3
+scikit-learn==1.7.2
+matplotlib==3.10.7
+PyYAML==6.0.2
+pytest==9.1.1
+ruff==0.17.4
