@@ -4,7 +4,6 @@
 
 **Author:** Ken Ira Lacson Talingting  
 **Version:** 2.0.0 · November 2026  
-**DOI:** [10.5281/zenodo.24280434](https://doi.org/10.5281/zenodo.24280434)  
 **PDF:** [`moe_factor_timing_benchmark.pdf`](moe_factor_timing_benchmark.pdf)
 
 ---
@@ -28,7 +27,6 @@ We ask whether a probabilistic mixture-of-experts (MoE) model can allocate acros
   version      = {2.0.0},
   howpublished = {GitHub},
   url          = {https://github.com/kira-ml/moe-factor-timing-v2},
-  doi          = {10.5281/zenodo.24280434},
   note         = {Research benchmark; not investment advice}
 }
 ```

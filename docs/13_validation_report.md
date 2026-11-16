@@ -94,7 +94,6 @@ A separate audit script recomputed the headline metrics from raw weights, return
 - The legacy repository `kira-ml/mixture-of-experts-factor-timing` returns 404 to unauthenticated requests (private).
 - The public README, `CITATION.cff`, `NOTICE`, `THIRD_PARTY_NOTICES.md`, and `docs/12` are present.
 - The public tree contains no absolute local paths or credentials. The only `FRED_API_KEY` mention is a statement that the local `.env` is untracked.
-- The v2.0.0 release is archived on Zenodo: [10.5281/zenodo.24280434](https://doi.org/10.5281/zenodo.24280434).
 
 ---
 

@@ -6,7 +6,6 @@
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-173B57?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![CI](https://github.com/kira-ml/moe-factor-timing-v2/actions/workflows/ci.yml/badge.svg)](https://github.com/kira-ml/moe-factor-timing-v2/actions/workflows/ci.yml)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24280434.svg)](https://doi.org/10.5281/zenodo.24280434)
 [![License: MIT](https://img.shields.io/badge/license-MIT-7A2633?style=flat-square)](LICENSE)
 [![Status: research benchmark](https://img.shields.io/badge/status-research%20benchmark-A3854F?style=flat-square)](#what-this-is)
 [![Result: inconclusive](https://img.shields.io/badge/result-inconclusive-7A2633?style=flat-square)](#key-result)
@@ -274,7 +273,6 @@ If you use this benchmark, please cite the Fama-French data source and this repo
   version      = {2.0.0},
   howpublished = {GitHub},
   url          = {https://github.com/kira-ml/moe-factor-timing-v2},
-  doi          = {10.5281/zenodo.24280434},
   note         = {Research benchmark; not investment advice}
 }
 ```

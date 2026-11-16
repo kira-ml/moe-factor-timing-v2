@@ -43,7 +43,7 @@
 | V2 implementation | Complete; 45 tests passing; Ruff clean |
 | V2 reference run | Complete; see `docs/10_reference_run.md` and `reports/v2_report.md` |
 | V2 validation | Complete; 242/242 independent checks and 41/41 reproduced artifacts; see `docs/13_validation_report.md` |
-| V2 release surface | CI, pinned constraints, quickstart notebook, extension guide, research paper, and [Zenodo DOI](https://doi.org/10.5281/zenodo.24280434) |
+| V2 release surface | CI, pinned constraints, quickstart notebook, extension guide, and research paper |
 | Prior V2 attempt | Preserved in the private development repository; not in this public release |
 
 ---

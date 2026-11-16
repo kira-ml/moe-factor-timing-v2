@@ -13,7 +13,6 @@ First public release of the reproducible benchmark.
 - `CONTRIBUTING.md`: development checks and contribution rules.
 - `paper/moe_factor_timing_benchmark.pdf`: full research paper.
 - `.zenodo.json`: archive metadata for the v2.0.0 release.
-- Zenodo DOI: [10.5281/zenodo.24280434](https://doi.org/10.5281/zenodo.24280434).
 
 ### Verified
 

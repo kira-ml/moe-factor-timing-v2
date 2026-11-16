@@ -8,7 +8,6 @@ authors:
   - family-names: Talingting
     given-names: Ken Ira Lacson
 repository-code: "https://github.com/kira-ml/moe-factor-timing-v2"
-doi: "10.5281/zenodo.24280434"
 keywords:
   - factor timing
   - mixture of experts
