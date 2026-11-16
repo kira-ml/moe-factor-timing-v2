@@ -39,7 +39,7 @@ The repository also includes [`CITATION.cff`](../CITATION.cff).
 
 ## Reproducibility
 
-The paper is generated from the verified reference run in `runs/reference`. The core claims are reproducible with:
+The paper is generated from the verified reference run; the run artifacts are not redistributed. The core claims are reproducible with:
 
 ```bash
 python -m pip install -e ".[dev]" -c constraints.txt
